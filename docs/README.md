@@ -42,13 +42,13 @@ Principais componentes são:
 
 - **Broker**: RabbitMQ como broker para fazer o encaminhamento das mensagens para o respectivo serviço responder.
 
-- **Service A**: Um serviço nameko que faz comunicação com uma base X, este trafégo de dados por ser critico conta com processo de criptografia e faz a comunicação com a base somente garantindo o endereço de origem.
+- **Service A**: Um serviço nameko que faz comunicação com uma base A, este trafégo de dados, por ser crÍtico, conta com processos de criptografia e faz a comunicação com a base com endereço de origem garantido.
 
-- **Service B**: Um serviço nameko que faz comunicação com uma base X, este trafégo de dados não possui criptografia e faz comunicação com a base somente garantindo o endereço de origem.
+- **Service B**: Um serviço nameko que faz comunicação com uma base B, este trafégo de dados não possui criptografia e faz comunicação com a base com endereço de origem garantido.
 
-- **Service C**: Um serviço nameko que faz comunicação com uma base X, faz comunicação com a base somente garantindo o endereço de origem além de possuir um cache para facilitar a consulta de dados e obter respostas mais rápidas com uma base Redis intermediária.
+- **Service C**: Um serviço nameko que faz comunicação com uma base C, faz comunicação com a base com endereço de origem garantido além de possuir um cache para facilitar a consulta de dados e obter respostas mais rápidas com uma base Redis intermediária.
 
-Foi respeitada a ideia de um arquitetura de nuvem receber uma única entrada de comunicação que pode ser verificada e validade e caso não seja seguraa recusada pela camada mais acima.
+Foi respeitada a ideia de um arquitetura de nuvem receber uma única entrada de comunicação que pode ser verificada e validada e caso não seja de uma origem confiável é recusada pela camada mais acima.
 
 ## Dados
 
