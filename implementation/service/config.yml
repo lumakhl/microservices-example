@@ -1,5 +1,4 @@
-
 DB_URIS:
-    "service:Base": postgresql://${DB_USER:postgres}:${DB_PASSWORD:password}@${DB_HOST:192.168.99.100}:${DB_PORT:5432}/${DB_NAME:postgres}
+    "service:Base": postgresql://${DB_USER:postgres}:${DB_PASSWORD:password}@${DB_HOST:localhost}:${DB_PORT:5432}/${DB_NAME:post}
 
-AMQP_URI: amqp://guest:guest@192.168.99.100:5672/
+AMQP_URI: amqp://${RABBIT_USER:guest}:${RABBIT_PASSWORD:guest}@${RABBIT_HOST:localhost}:${RABBIT_PORT:5672}/
