@@ -18,8 +18,8 @@ Para o desenvolvimento deste exemplo são propostas as seguintes tecnologias. As
 
 ### Protocolos
 
-- REST
-- RCP
+- HTTP
+- AMQP
 
 ### Disponibilização
 
@@ -54,7 +54,7 @@ Foi respeitada a ideia de um arquitetura de nuvem receber uma única entrada de 
 
 Os seguintes conjuntos de dados foram utilizados por cada uma das bases:
 
-![Diagrama de cada uma das três bases](./assets/base-diagrama.png)
+![Diagrama de cada uma das três bases](./assets/base-diagrama.jpg)
 
 
 ### Referências
