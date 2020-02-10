@@ -9,7 +9,7 @@ class GatewayService:
     service_rpc = RpcProxy('service')
 
     @http('GET', '/pessoa/<string:pessoa_id>')
-    def get_pessoa(self, request, airport_id):
+    def get_pessoa(self, request, pessoa_id):
         pessoa = self.service_rpc.get_pessoa(pessoa_id)
         return json.dumps({'pessoa': pessoa})
     
