@@ -13,6 +13,7 @@ services:
     restart: always
 
   rabbit:
+    container_name: rabbit
     image: rabbitmq:3-management
     ports:
         - "15672:15672"
@@ -23,11 +24,16 @@ services:
     depends_on:
       - rabbit
       - postgres
+    ports:
+        - "8001:8000"
+    links:
+        - "rabbit:rabbit"
+        - "postgres:postgres"  
     environment:
         DB_PASSWORD: "password"
         DB_USER: "postgres"
-        DB_HOST: "postgres"
-        DB_NAME: "orders"
+        DB_HOST: "localhost"
+        DB_NAME: "postgres"
         RABBIT_PASSWORD: "guest"
         RABBIT_USER: "guest"
         RABBIT_HOST: "rabbit"

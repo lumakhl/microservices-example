@@ -2,6 +2,6 @@
 
 until nc -z ${RABBIT_HOST} ${RABBIT_PORT}; do
     echo "$(date) - waiting for rabbitmq..."
-    sleep 2
+done
 
 nameko run --config config.yml service.service --backdoor 3000
